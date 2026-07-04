@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="hero1Title">
+  <title id="hero1Title">Rehabilitation care background</title>
+  <defs>
+    <linearGradient id="hero1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B5CAD" />
+      <stop offset="100%" stop-color="#69B42E" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#hero1Grad)" />
+  <circle cx="420" cy="360" r="180" fill="rgba(255,255,255,0.12)" />
+  <circle cx="1080" cy="500" r="240" fill="rgba(255,255,255,0.1)" />
+</svg>

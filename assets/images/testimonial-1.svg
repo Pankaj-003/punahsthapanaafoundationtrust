@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="testimonial1Title">
+  <title id="testimonial1Title">Testimonial 1 placeholder</title>
+  <circle cx="250" cy="160" r="92" fill="#0B5CAD" opacity="0.2" />
+  <circle cx="250" cy="160" r="72" fill="#fff" stroke="#0B5CAD" stroke-width="12" />
+  <rect x="120" y="280" width="260" height="180" rx="36" fill="#eef7ff" />
+  <text x="250" y="320" font-family="Inter, sans-serif" font-size="24" fill="#0B5CAD" text-anchor="middle">Sunita</text>
+  <text x="250" y="360" font-family="Inter, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle">Patient</text>
+</svg>

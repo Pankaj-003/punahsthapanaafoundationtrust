@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="aboutPeopleTitle">
+  <title id="aboutPeopleTitle">About people illustration</title>
+  <defs>
+    <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B5CAD" />
+      <stop offset="100%" stop-color="#69B42E" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#eef7ff" />
+  <circle cx="300" cy="320" r="140" fill="#fff" stroke="#0B5CAD" stroke-width="16" />
+  <circle cx="780" cy="350" r="130" fill="#fff" stroke="#69B42E" stroke-width="16" />
+  <rect x="160" y="510" width="280" height="160" rx="32" fill="#fff" />
+  <rect x="640" y="540" width="280" height="140" rx="32" fill="#fff" />
+  <path d="M300 460 C280 520 280 580 300 620" stroke="#0B5CAD" stroke-width="20" fill="none" stroke-linecap="round" />
+  <path d="M780 480 C760 530 760 590 780 620" stroke="#69B42E" stroke-width="20" fill="none" stroke-linecap="round" />
+</svg>

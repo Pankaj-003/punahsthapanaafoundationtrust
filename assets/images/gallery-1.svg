@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="gallery1Title">
+  <title id="gallery1Title">Gallery image placeholder</title>
+  <rect width="640" height="480" fill="#eef7ff" />
+  <rect x="40" y="40" width="560" height="400" rx="36" fill="#fff" stroke="#0B5CAD" stroke-width="16" />
+  <path d="M120 120 L520 120 L520 360 L120 360 Z" fill="#d8e7ff" />
+</svg>
