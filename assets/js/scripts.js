@@ -7,6 +7,77 @@ document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
+  const imageUrl = (query, size, sig) => {
+    const terms = query.trim().toLowerCase().replace(/[^a-z0-9]+/g, ',').replace(/^,|,$/g, '');
+    return `https://source.unsplash.com/${size}/?${terms}&sig=punahsthapanaa-${sig}`;
+  };
+
+  const premiumIndianImages = {
+    hero: [
+      imageUrl('indian doctor hospital patient consultation warm light', '1920x1200', 'hero-care'),
+      imageUrl('india physiotherapy rehabilitation center patient recovery', '1920x1200', 'hero-rehab'),
+    ],
+    about: imageUrl('indian healthcare team hospital rehabilitation center', '1200x1400', 'about-team'),
+    programs: [
+      imageUrl('indian physiotherapist treating patient clinic', '900x650', 'program-physio'),
+      imageUrl('indian counseling support group rehabilitation', '900x650', 'program-addiction'),
+      imageUrl('indian mental health counselor consultation', '900x650', 'program-counseling'),
+      imageUrl('indian yoga therapy healthcare wellness', '900x650', 'program-yoga'),
+      imageUrl('indian elderly care nurse senior citizen', '900x650', 'program-senior'),
+      imageUrl('indian home healthcare physiotherapy patient', '900x650', 'program-home'),
+    ],
+    testimonials: [
+      imageUrl('indian woman patient portrait healthcare', '300x300', 'testimonial-woman'),
+      imageUrl('indian man patient portrait hospital', '300x300', 'testimonial-man'),
+    ],
+    gallery: [
+      imageUrl('indian rehabilitation center physiotherapy session', '900x1200', 'gallery-rehab'),
+      imageUrl('indian medical camp ngo volunteers healthcare', '900x700', 'gallery-camp'),
+      imageUrl('indian hospital doctor consultation patient', '900x700', 'gallery-doctor'),
+      imageUrl('indian elderly care healthcare staff therapy', '1400x800', 'gallery-elderly'),
+    ],
+  };
+
+  document.querySelectorAll('.hero-slide').forEach((slide, index) => {
+    slide.style.backgroundImage = `url("${premiumIndianImages.hero[index % premiumIndianImages.hero.length]}")`;
+  });
+
+  const aboutImage = document.querySelector('.main-about-img');
+  if (aboutImage) aboutImage.src = premiumIndianImages.about;
+
+  document.querySelectorAll('.program-img-header img').forEach((image, index) => {
+    image.src = premiumIndianImages.programs[index % premiumIndianImages.programs.length];
+    image.loading = 'lazy';
+    image.decoding = 'async';
+  });
+
+  document.querySelectorAll('.tm-user img').forEach((image, index) => {
+    image.src = premiumIndianImages.testimonials[index % premiumIndianImages.testimonials.length];
+    image.loading = 'lazy';
+    image.decoding = 'async';
+  });
+
+  document.querySelectorAll('.gallery-cell img').forEach((image, index) => {
+    image.src = premiumIndianImages.gallery[index % premiumIndianImages.gallery.length];
+    image.loading = 'lazy';
+    image.decoding = 'async';
+  });
+
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('pointerdown', event => {
+      const rect = button.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const ripple = document.createElement('span');
+      ripple.className = 'btn-ripple';
+      ripple.style.width = `${size}px`;
+      ripple.style.height = `${size}px`;
+      ripple.style.left = `${event.clientX - rect.left - size / 2}px`;
+      ripple.style.top = `${event.clientY - rect.top - size / 2}px`;
+      button.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+
   if (navToggle && mainNav) {
     navToggle.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('open');
